@@ -135,11 +135,11 @@ public class GameManager : MonoBehaviour
 
     public Controller GetControllerFromMarkerType(MarkerType markerType)
     {
-        if (controllerOne.markerType == markerType)
+        if (controllerOne && controllerOne.markerType == markerType)
         {
             return controllerOne;
         }
-        if (controllerTwo.markerType == markerType)
+        if (controllerTwo &&  controllerTwo.markerType == markerType)
         {
             return controllerTwo;
         }
