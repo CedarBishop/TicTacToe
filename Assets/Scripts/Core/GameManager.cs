@@ -78,10 +78,11 @@ public class GameManager : MonoBehaviour
         controllerOne.controllerNumber = 1;
         controllerTwo.markerType = MarkerType.Crosses;
         controllerTwo.controllerNumber = 2;
-        currentTurn = MarkerType.Noughts;
-        controllerOne.StartTurn();
+        currentTurn = (Random.Range(0, 2) == 0) ? MarkerType.Noughts : MarkerType.Crosses;
+        Controller controller = GetControllerFromMarkerType(currentTurn);
+        controller.StartTurn();
         UIManager.instance.CurrentUIState = UIState.Game;
-        newTurnEvent?.Invoke(controllerOne);
+        newTurnEvent?.Invoke(controller);
     }
 
     public void StartNewGame(ControllerType playerOneControllerType, ControllerType playerTwoControllerType)

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
     public Tile[] tiles; // top left, top middle, top right, middle left, middle middle, middle right, bottom left, bottom middle, bottom right
+    public Vector3Int[] setsToWin; 
 
     void Start()
     {
@@ -39,16 +40,12 @@ public class Board : MonoBehaviour
 
     public bool CheckForWin(MarkerType markerType)
     {
-        if ((tiles[0].GetMarkerType() == markerType && tiles[1].GetMarkerType() == markerType && tiles[2].GetMarkerType() == markerType) || // Top row
-            (tiles[3].GetMarkerType() == markerType && tiles[4].GetMarkerType() == markerType && tiles[5].GetMarkerType() == markerType) || // Middle row
-            (tiles[6].GetMarkerType() == markerType && tiles[7].GetMarkerType() == markerType && tiles[8].GetMarkerType() == markerType) || // bottom row
-            (tiles[0].GetMarkerType() == markerType && tiles[3].GetMarkerType() == markerType && tiles[6].GetMarkerType() == markerType) || // left column
-            (tiles[1].GetMarkerType() == markerType && tiles[4].GetMarkerType() == markerType && tiles[7].GetMarkerType() == markerType) || // middle column
-            (tiles[2].GetMarkerType() == markerType && tiles[5].GetMarkerType() == markerType && tiles[8].GetMarkerType() == markerType) || // right column
-            (tiles[0].GetMarkerType() == markerType && tiles[4].GetMarkerType() == markerType && tiles[8].GetMarkerType() == markerType) || //diagonal 1
-            (tiles[2].GetMarkerType() == markerType && tiles[4].GetMarkerType() == markerType && tiles[6].GetMarkerType() == markerType)) // diagonal 2
+        foreach (Vector3Int set in setsToWin)
         {
-            return true;
+            if (tiles[set.x].GetMarkerType() == markerType && tiles[set.y].GetMarkerType() == markerType && tiles[set.z].GetMarkerType() == markerType)
+            {
+                return true;
+            }
         }
         return false;
     }
@@ -64,4 +61,51 @@ public class Board : MonoBehaviour
         }
         return true;
     }
+
+    public int CalculateBestMove(MarkerType markerType)
+    {
+        if (tiles[4].GetMarkerType() == MarkerType.None)
+        {
+            return 4;
+        }
+        foreach (Vector3Int set in setsToWin)
+        {
+            if (tiles[set.x].GetMarkerType() == markerType && tiles[set.y].GetMarkerType() == markerType && tiles[set.z].GetMarkerType() == MarkerType.None)
+            {
+                return set.z;
+            }
+            if (tiles[set.x].GetMarkerType() == markerType && tiles[set.y].GetMarkerType() == MarkerType.None && tiles[set.z].GetMarkerType() == markerType)
+            {
+                return set.y;
+            }
+            if (tiles[set.x].GetMarkerType() == MarkerType.None && tiles[set.y].GetMarkerType() == markerType && tiles[set.z].GetMarkerType() == markerType)
+            {
+                return set.x;
+            }
+        }
+        MarkerType oppositeMarkerType = markerType == MarkerType.Crosses ? MarkerType.Noughts : MarkerType.Crosses;
+        foreach (Vector3Int set in setsToWin)
+        {
+            if (tiles[set.x].GetMarkerType() == oppositeMarkerType && tiles[set.y].GetMarkerType() == oppositeMarkerType && tiles[set.z].GetMarkerType() == MarkerType.None)
+            {
+                return set.z;
+            }
+            if (tiles[set.x].GetMarkerType() == oppositeMarkerType && tiles[set.y].GetMarkerType() == MarkerType.None && tiles[set.z].GetMarkerType() == oppositeMarkerType)
+            {
+                return set.y;
+            }
+            if (tiles[set.x].GetMarkerType() == MarkerType.None && tiles[set.y].GetMarkerType() == oppositeMarkerType && tiles[set.z].GetMarkerType() == oppositeMarkerType)
+            {
+                return set.x;
+            }
+        }
+
+        int randTileNumber = -1;
+        do
+        {
+            randTileNumber = Random.Range(0, 9);
+        } while (!CanSelectTile(randTileNumber));
+        return randTileNumber;
+    }
 }
+

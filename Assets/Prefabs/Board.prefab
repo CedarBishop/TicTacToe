@@ -62,6 +62,15 @@ MonoBehaviour:
   - {fileID: 7638978080130773820}
   - {fileID: 7638978080122712425}
   - {fileID: 7638978080318924019}
+  setsToWin:
+  - {x: 0, y: 1, z: 2}
+  - {x: 3, y: 4, z: 5}
+  - {x: 6, y: 7, z: 8}
+  - {x: 0, y: 3, z: 6}
+  - {x: 1, y: 4, z: 7}
+  - {x: 2, y: 5, z: 8}
+  - {x: 0, y: 4, z: 8}
+  - {x: 2, y: 4, z: 6}
 --- !u!1001 &4146413681095740679
 PrefabInstance:
   m_ObjectHideFlags: 0
