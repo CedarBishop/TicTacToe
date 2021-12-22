@@ -24,6 +24,7 @@ public class Board : MonoBehaviour
     public void SelectTile(int tilePosition, MarkerType markerType)
     {
         tiles[tilePosition].SetMarkerType(markerType);
+        SoundManager.instance.PlaySFX("PlaceMarker");
         if (CheckForWin(markerType))
         {
             GameManager.instance.EndGame(markerType);

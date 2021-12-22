@@ -53,13 +53,13 @@ public class Tile : MonoBehaviour
         return markerType;
     }
 
-    private void Update()
-    {
-        if (markerType == MarkerType.None)
-        {
-            Vector3 inputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D collider = Physics2D.OverlapPoint(inputPosition);
-            spriteRenderer.sprite = collider != null && collider.gameObject == gameObject ? hoveredSprite : idleSprite;
-        }
-    }
+    //private void Update()
+    //{
+    //    if (markerType == MarkerType.None)
+    //    {
+    //        Vector3 inputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    //        Collider2D collider = Physics2D.OverlapPoint(inputPosition);
+    //        spriteRenderer.sprite = collider != null && collider.gameObject == gameObject ? hoveredSprite : idleSprite;
+    //    }
+    //}
 }

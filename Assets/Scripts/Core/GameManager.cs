@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
         }
         scoreUpdatedEvent?.Invoke();
         UIManager.instance.CurrentUIState = UIState.End;
+        SoundManager.instance.PlaySFX("GameOver");
     }
 
     public void NextTurn()
