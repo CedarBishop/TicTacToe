@@ -10,8 +10,15 @@ public class Tile : MonoBehaviour
     public GameObject noughtSprite;
     public GameObject crossSprite;
 
+    public Sprite idleSprite;
+    public Sprite hoveredSprite;
+    public Sprite pressedSprite;
+
+    private SpriteRenderer spriteRenderer;
+
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         SetMarkerType(MarkerType.None);
     }
 
@@ -28,9 +35,11 @@ public class Tile : MonoBehaviour
         {
             case MarkerType.Noughts:
                 noughtSprite.SetActive(true);
+                spriteRenderer.sprite = pressedSprite;
                 break;
             case MarkerType.Crosses:
                 crossSprite.SetActive(true);
+                spriteRenderer.sprite = pressedSprite;
                 break;
             case MarkerType.None:
                 break;
@@ -42,5 +51,15 @@ public class Tile : MonoBehaviour
     public MarkerType GetMarkerType()
     {
         return markerType;
+    }
+
+    private void Update()
+    {
+        if (markerType == MarkerType.None)
+        {
+            Vector3 inputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D collider = Physics2D.OverlapPoint(inputPosition);
+            spriteRenderer.sprite = collider != null && collider.gameObject == gameObject ? hoveredSprite : idleSprite;
+        }
     }
 }

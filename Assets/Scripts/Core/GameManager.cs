@@ -74,11 +74,11 @@ public class GameManager : MonoBehaviour
             Destroy(boardInstance.gameObject);
         }
         boardInstance = Instantiate(boardPrefab);
-        controllerOne.markerType = MarkerType.Noughts;
+        controllerOne.markerType = MarkerType.Crosses;
         controllerOne.controllerNumber = 1;
-        controllerTwo.markerType = MarkerType.Crosses;
+        controllerTwo.markerType = MarkerType.Noughts;
         controllerTwo.controllerNumber = 2;
-        currentTurn = (Random.Range(0, 2) == 0) ? MarkerType.Noughts : MarkerType.Crosses;
+        currentTurn = (Random.Range(0, 2) == 0) ? MarkerType.Crosses : MarkerType.Noughts;
         Controller controller = GetControllerFromMarkerType(currentTurn);
         controller.StartTurn();
         UIManager.instance.CurrentUIState = UIState.Game;

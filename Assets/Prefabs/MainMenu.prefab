@@ -116,7 +116,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 861b9f3dcb689e64d99259508fd0c3aa, type: 3}
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 1
@@ -259,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.y
@@ -316,6 +316,34 @@ PrefabInstance:
     - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Text
       value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c7e52da6c6ede1a42a01f3975f700245, type: 3}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7351253775186117358, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Name
@@ -393,7 +421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.y
@@ -450,6 +478,30 @@ PrefabInstance:
     - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Text
       value: Vs Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c7e52da6c6ede1a42a01f3975f700245, type: 3}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7351253775186117358, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Name
@@ -527,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.y
@@ -584,6 +636,30 @@ PrefabInstance:
     - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Text
       value: Vs AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c7e52da6c6ede1a42a01f3975f700245, type: 3}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7351253775186117358, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Name

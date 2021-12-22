@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.y
@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c7e52da6c6ede1a42a01f3975f700245, type: 3}
     - target: {fileID: 7351253775186117358, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Name
       value: Button (1)
@@ -312,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 3459146292246159377, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_SizeDelta.y
@@ -370,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 6678312860479024966, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c7e52da6c6ede1a42a01f3975f700245, type: 3}
     - target: {fileID: 7351253775186117358, guid: 570c14ade4079d340bd1c5432add5049, type: 3}
       propertyPath: m_Name
       value: Button

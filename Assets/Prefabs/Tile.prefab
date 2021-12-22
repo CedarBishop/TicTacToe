@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 4f948c7b5e2d9ce40844e0a40e00d8de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3038a9b057f19b4387c8dd0c1da22ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,6 +102,9 @@ MonoBehaviour:
   tilePosition: 0
   noughtSprite: {fileID: 6995480893544815113}
   crossSprite: {fileID: 5822041248614516915}
+  idleSprite: {fileID: 21300000, guid: c3038a9b057f19b4387c8dd0c1da22ae, type: 3}
+  hoveredSprite: {fileID: 21300000, guid: 77cefccf583f4e04e89473ceab750444, type: 3}
+  pressedSprite: {fileID: 21300000, guid: b11b44ac019f24a48beb6a1cf919be62, type: 3}
 --- !u!61 &1119088255231983797
 BoxCollider2D:
   m_ObjectHideFlags: 0
