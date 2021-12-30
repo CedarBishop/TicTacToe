@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance = null;
 
-    public List<TPair<string, AudioClip>> audioClips = new List<TPair<string, AudioClip>>();
+    public List<SoundProperties> soundProperties = new List<SoundProperties>();
     private Dictionary<string, AudioSource> sfxMap = new Dictionary<string, AudioSource>();
 
     private void Awake()
@@ -24,15 +24,16 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        foreach (var item in audioClips)
+        foreach (var item in soundProperties)
         {
             GameObject go = new GameObject();
             go.transform.parent = transform;
             AudioSource source = go.AddComponent<AudioSource>();
-            source.clip = item.value;
+            source.clip = item.clip;
+            source.volume = item.volume;
             source.loop = false;
             source.playOnAwake = false;
-            sfxMap.Add(item.key, source);
+            sfxMap.Add(item.name, source);
         }
     }
 
@@ -55,3 +56,12 @@ public class TPair<TKey, TValue>
     public TKey key;
     public TValue value;
 }
+
+[Serializable]
+public class SoundProperties
+{
+    public string name;
+    public AudioClip clip;
+    [Range(0.0f, 1.0f)] public float volume;
+}
+

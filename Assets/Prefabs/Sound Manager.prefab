@@ -43,7 +43,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 98df41a276261b04f834c8102d9da7f2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -178,3 +178,13 @@ MonoBehaviour:
     value: {fileID: 8300000, guid: 5989d362cdfb1954b849c7c32d5322c3, type: 3}
   - key: PlaceMarker
     value: {fileID: 8300000, guid: ff4b51f6874d440458dbc2a592acfa46, type: 3}
+  soundProperties:
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: dab8131cfd1481d4f80f63276f893089, type: 3}
+    volume: 1
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 5989d362cdfb1954b849c7c32d5322c3, type: 3}
+    volume: 0.7
+  - name: PlaceMarker
+    clip: {fileID: 8300000, guid: ff4b51f6874d440458dbc2a592acfa46, type: 3}
+    volume: 1
